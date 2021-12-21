@@ -21,7 +21,7 @@ body{
 .container{
     position: relative;
     /*transform: rotateY(120deg);*/
-    animation: rotaate 35s infinite linear;
+    animation: rotate 35s infinite linear;
 }
 @keyframes rotate{
     to{ transform: rotateY(180deg);}
