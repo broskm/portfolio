@@ -1,0 +1,186 @@
+
+.card{
+    position: absolute;
+    overflow: hidden;
+    height: 20rem;
+    width:13rem;
+    border-radius: 10px;
+    transform: translate(-50%, -46%) rotateY(calc(90deg*var(--i))) translateZ(30rem);
+}
+.card-content{
+    width: 100%;
+    height: 100%;
+    background: rgb(0, 0, 0);
+}
+.card-content .border{
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    transition: border 1s;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+/*card 1 content---------------------------------- */
+.card1-content{
+    padding: 2px;
+    border-radius: inherit;
+    background: 
+    radial-gradient(rgba(0, 0, 0, 0.377),
+     rgb(0, 0, 0)67%),
+     url('../resources/me3.jpg') center center no-repeat;
+    background-size: 100%;
+    transition: background 1s,filter 1s;
+    filter: grayscale(50%);
+  }
+
+.card1-content h2{
+    margin: 10px;
+    opacity: 0;
+    transition: opacity 1s;
+    box-shadow: #000 1px;
+}
+.icons{
+  position: absolute;
+  width: 10%;
+  fill: #fff;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 1rem;
+  bottom: 20px;
+  left: 5px;
+}
+.card1-content .fab{
+    margin: 2px;
+    opacity: 0;
+    transition: opacity 1s;
+}
+.card1-content a{
+    text-decoration: none;
+    color:#fff;
+}
+
+@keyframes fadin {
+    25%{opacity: 0.1;}
+    50%{opacity: 0.2;}
+    75%{opacity: 0.7;}
+    100%{opacity: 1;}
+}
+
+.card1-content:hover{
+    background: 
+    radial-gradient(rgba(0, 0, 0, 0.479),
+     rgb(0, 0, 0)67%), url('../resources/me3.jpg') 
+    left center no-repeat;
+  background-size: 160%;
+  
+  filter: grayscale(90%);
+}
+
+.card-content:hover .border{
+    border: 1px solid white;
+/*     animation: fadin 1s linear forwards;
+ */}
+.card1-content:hover .fab,.card1-content:hover h2{
+    opacity: 1;}
+.card-1{
+    background-color: rgb(0, 0, 0);
+}
+
+
+/*card 2 content-------------------------------------- */
+
+.card-2{
+    background-color: rgb(255, 255, 255);
+}
+.skills-list{
+    margin: 20px;
+}
+.card2-content h2{
+}
+.card2-content .html-porgress{
+    padding-left: 3px;
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    width: 180px;
+    height: 20px;
+    border-radius: 5px;
+    background-color: rgb(39, 6, 6);
+    box-shadow: inset 3px 3px 2px rgb(27, 25, 25),
+    inset -3px -3px 2px rgb(75, 58, 58);
+    
+}
+.card2-content .html-porgress .progress-bar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.4rem;
+    border-radius: 5px;
+    width: 90%;
+    height: 70%;
+    background-color: red;
+    box-shadow:1px 1px 10px rgb(248, 2, 2),
+               -1px -1px 10px rgb(255, 0, 0) ;   
+}
+
+
+.card-3{
+    background-color: red;
+}
+.card-4{
+    background-color: rgb(236, 139, 212);
+}
+
+
+.layers {
+    display: none;
+position: absolute;
+left: 0; top: 0;
+width: 100%; height: 100%;
+z-index: -1;
+}
+
+.layer {
+position: absolute;
+width: 100%; height: 100%;
+border-radius: 1em;
+background-color: red;
+box-shadow: 0 0 0.5em #000d inset;
+}
+.layer-1{
+    transform: translateZ(-2px);
+}
+.layer-2{
+    transform: translateZ(-4px);
+}
+.layer-3{
+    transform: translateZ(-8px);
+}
+.layer-4{
+    transform: translateZ(-6px);
+}
+.layer-5{
+    transform: translateZ(-10px);
+}
+.layer-6{
+    transform: translateZ(-12px);
+}
+.layer-7{
+    transform: translateZ(-14px);
+}
+.layer-8{
+    transform: translateZ(-16px);
+}
+.layer-9{
+    transform: translateZ(-18px);
+}
+.layer-10{
+    transform: translateZ(-20px);
+    box-shadow: 0 0 0.5em #000d inset, 0 0 5px #000;
+}

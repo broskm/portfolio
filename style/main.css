@@ -1,0 +1,130 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    transform-style: preserve-3d;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #111;
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 900px;
+    perspective-origin: center calc(50% + 2.4rem);
+    overflow: hidden;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+h2{
+    font-size: 1rem;
+}
+.hidden{
+    display: none;
+}
+
+.container{
+    position: relative;
+    transform: rotateY(-90deg);
+    animation: rotaate 20s infinite linear;
+}
+@keyframes rotate{
+    to{ transform: rotateY(360deg);}
+}
+ 
+.floor{
+    position: absolute;
+    width: 70rem;
+    height: 70rem;
+    background-color: rgb(0, 0, 0);
+    background-image:
+    radial-gradient(rgba(13, 13, 14, 0.667), #111 66%),
+    url('https://assets.codepen.io/1948355/marble01.jpg');
+    transform: translate(-50%, -50%) rotateX(90deg)
+     translateZ(-15rem);
+}
+.floor-inner{
+    height: 100%;
+    width: 100%;
+    box-shadow: 0 0 0 1000px #111;
+    background-image:radial-gradient(rgba(87, 83, 83, 0.667), #111 25%);
+    transform: translate(-20%,-20%);
+    display: none;
+  /*animation: moving-spot-light1 5s linear,
+        shrinking-spot-light1 7s linear,
+        moving-spot-light-21 6s linear; */
+}
+/* @keyframes moving-spot-light {
+    20%{transform: translate(20%,-50%);}
+    40%{transform: translate(40%,-60%);}
+    60%{transform: translate(60%,0);}
+    80%{transform: translate(-10%,20%);}
+    100%{transform: translate(0,0);}
+
+
+}
+@keyframes shrinking-spot-light {
+    
+    100%{background-image:radial-gradient(rgba(87, 83, 83, 0.667), #111 15%)
+    }
+}
+@keyframes moving-spot-light-2 {
+    90%{transform: translate(0,0);}
+    95%{transform: translate(-10%,-10%);}
+    100%{transform: translate(0,0);}
+} */
+.middel-box{
+    height: 4rem;
+    width: 4rem;
+    position: relative;
+    transform:translate(-50%, 11rem);
+}
+.box-sides{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px ;
+    position: absolute;
+    background-color: #e40b0b;
+    animation: gloewing 0.5s linear infinite;
+}
+@keyframes glowing {
+   to{ 
+    background-color: #080707;
+    }
+}
+
+
+.box-sides.front{
+    transform: translateZ(2rem);
+}
+.box-sides.back{
+    transform: translateZ(-2rem);
+}
+.box-sides.left{
+    transform: rotatey(270deg) translateZ(2rem);
+}
+.box-sides.right{
+    transform: rotatey(90deg) translateZ(2rem);
+}
+.box-sides.top{
+    transform: rotatex(90deg) translateZ(2rem);
+}
+.box-sides.bottom{
+    transform: rotatex(270deg) translateZ(1.9rem) scale(2);
+    filter: blur(15px);
+}
+
+.lights{
+    position: absolute;
+    transform: translate(-50%, -130%);
+    height: 15rem;
+    width:20rem;
+    border-radius: 1em;
+    background-color: rgb(166, 255, 0);
+}
+
+/* JS class list*/
+
+.white-background{
+    background-color: rgb(88, 85, 85);
+}
