@@ -7,7 +7,8 @@
     width:13rem;
     padding:2px;
     border-radius: 10px;
-    transform: translate(-50%, -46%) rotateY(calc(90deg*var(--i))) translateZ(30rem);
+    transform: translate(-50%, -50%)
+     rotateY(calc(90deg*var(--i))) translateZ(22rem);
 }
 .card-content{
     width: 100%;

@@ -50,8 +50,8 @@ table, caption, tbody, tfoot, thead, tr, th, td {
  
 .floor{
     position: absolute;
-    width: 70rem;
-    height: 70rem;
+    width: 768px;
+    height: 768px;
     background-color: rgb(0, 0, 0);
     background-image:
     radial-gradient(rgba(13, 13, 14, 0.667), #111 66%),
