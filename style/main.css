@@ -16,17 +16,33 @@ body{
     overflow: hidden;
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
+h1{
+    font-size: 1.2rem;
+}
 h2{
     font-size: 1rem;
+}
+h3{
+    font-size: 0.8rem;
+}
+h4{
+    font-size: 0.6rem;
+}
+h5{
+    font-size: 0.4rem;
 }
 .hidden{
     display: none;
 }
 
+table, caption, tbody, tfoot, thead, tr, th, td {
+    all: unset;
+}
+
 .container{
     position: relative;
-    transform: rotateY(-90deg);
-    animation: rotaate 20s infinite linear;
+    transform: rotateY(-0deg);
+    animation: rotate 20s infinite linear;
 }
 @keyframes rotate{
     to{ transform: rotateY(360deg);}
@@ -39,7 +55,7 @@ h2{
     background-color: rgb(0, 0, 0);
     background-image:
     radial-gradient(rgba(13, 13, 14, 0.667), #111 66%),
-    url('https://assets.codepen.io/1948355/marble01.jpg');
+    url('../resources/floorBlock.jpg');
     transform: translate(-50%, -50%) rotateX(90deg)
      translateZ(-15rem);
 }
@@ -85,7 +101,7 @@ h2{
     border-radius: 5px ;
     position: absolute;
     background-color: #e40b0b;
-    animation: gloewing 0.5s linear infinite;
+    animation: glowing 0.5s linear infinite;
 }
 @keyframes glowing {
    to{ 
