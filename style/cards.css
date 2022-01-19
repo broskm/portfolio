@@ -1,16 +1,16 @@
 
 .card{
-    background-color: black;
     position: absolute;
-    overflow: hidden;
-    height: 20rem;
     width:13rem;
-    padding:2px;
+    height: 20rem;
     border-radius: 10px;
     transform: translate(-50%, -50%)
      rotateY(calc(90deg*var(--i))) translateZ(22rem);
 }
 .card-content{
+    opacity: 1;
+    border-radius: 10px;
+    background-color: black;
     width: 100%;
     height: 100%;
 }
@@ -28,6 +28,7 @@
 }
 /*card 1 content---------------------------------- */
 .card-1-background{
+    opacity: 1;
     width: 100%;
     height: 100%;
     position: absolute;
@@ -56,7 +57,7 @@
 .card-1-content h2,
 .card-1-content h3 {
     box-shadow: #000 1px;
-    color: red;
+    color: rgb(240, 240, 240);
     text-shadow: -1px -1px 2px rgb(184, 80, 99); 
 }
 .card-1-content .icons{
@@ -80,7 +81,7 @@
 }
 .card-1-content a{
     text-decoration: none;
-    color:red;
+    color:rgb(255, 255, 255);
 }
 .card-1:hover .card-1-background{
     background: 
@@ -144,7 +145,7 @@
 .card-3-content .skills-list h4
 
 {
-    color: red;
+    color: rgb(255, 255, 255);
     text-shadow: 1px 1px 0.5px rgb(122, 27, 27);
 }
 .card-3-content .skills-list h4{
@@ -169,8 +170,8 @@
     font-size: 0.4rem;
     border-radius: 5px;
     height: 70%;
-    background-color: red;
-    box-shadow:1.5px 2px 0.5px rgb(122, 27, 27) ;   
+    background-color: rgb(206, 146, 146);
+    box-shadow:1.5px 2px 0.5px rgb(129, 85, 85) ;   
 }
 .card-3-content .html-section .progress-bar{
     width: 97%;
@@ -272,36 +273,40 @@
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    background-color: red;
-    box-shadow:-1px -1px 0px rgba(255, 0, 0, 0.432);
+    background-color: rgb(146, 99, 99);
+    box-shadow:-1px -1px 0px rgba(146, 53, 53, 0.432);
 }
 .card-4 .languge-lvl .inner .half-filled{
     width: 40%;
     height: 40%;
     border-radius: 50%;
-    background-color: red;
-    box-shadow:-1px -1px 0 rgba(255, 0, 0, 0.432);
+    background-color: rgb(146, 99, 99);
+    box-shadow:-1px -1px 0px rgba(146, 53, 53, 0.432);
 }
 
 
 /*----------------------------*/
 
-.layers {
-    display: none;
-position: absolute;
-left: 0; top: 0;
-width: 100%; height: 100%;
-z-index: -1;
+.layers-container{
+    position: absolute;
+    width: 100%; height: 100%;
+    z-index: -1;
+    transform: translateY(-100%);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+
 }
 
 .layer {
-position: absolute;
-width: 100%; height: 100%;
-border-radius: 1em;
-background-color: red;
-box-shadow: 0 0 0.5em #000d inset;
+    position: absolute;
+    border-radius: 10px;
+    transform: translateZ(-20.5rem);
+    width: 3rem;
+    height: 3rem;
+    background-color: rgb(47, 0, 255);
 }
-.layer-1{
+/* .layer-1{
     transform: translateZ(-2px);
 }
 .layer-2{
@@ -330,5 +335,4 @@ box-shadow: 0 0 0.5em #000d inset;
 }
 .layer-10{
     transform: translateZ(-20px);
-    box-shadow: 0 0 0.5em #000d inset, 0 0 5px #000;
-}
+} */

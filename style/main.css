@@ -31,9 +31,7 @@ h4{
 h5{
     font-size: 0.4rem;
 }
-.hidden{
-    display: none;
-}
+
 
 table, caption, tbody, tfoot, thead, tr, th, td {
     all: unset;
@@ -41,94 +39,73 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 
 .container{
     position: relative;
-    transform: rotateY(-0deg);
-    animation: rotate 20s infinite linear;
+    transform: rotateY(-45deg);
 }
-@keyframes rotate{
-    to{ transform: rotateY(360deg);}
-}
+
  
 .floor{
     position: absolute;
     width: 768px;
     height: 768px;
-    background-color: rgb(0, 0, 0);
+    background-color: rgba(56, 55, 55, 0.753);
     background-image:
-    radial-gradient(rgba(13, 13, 14, 0.667), #111 66%),
+    radial-gradient(rgba(13, 13, 14, 0.667), #111 100%),
     url('../resources/floorBlock.jpg');
     transform: translate(-50%, -50%) rotateX(90deg)
-     translateZ(-15rem);
+     translateZ(-10rem);
+     transition: background-image 3s ease-in-out ;
 }
 .floor-inner{
+    position: absolute;
     height: 100%;
     width: 100%;
     box-shadow: 0 0 0 1000px #111;
-    background-image:radial-gradient(rgba(87, 83, 83, 0.667), #111 25%);
-    transform: translate(-20%,-20%);
-    display: none;
+    background-image:
+    radial-gradient(rgba(41, 41, 43, 0.075), #111 0%),
+    url('../resources/floorBlock.jpg');
   /*animation: moving-spot-light1 5s linear,
         shrinking-spot-light1 7s linear,
         moving-spot-light-21 6s linear; */
 }
-/* @keyframes moving-spot-light {
-    20%{transform: translate(20%,-50%);}
-    40%{transform: translate(40%,-60%);}
-    60%{transform: translate(60%,0);}
-    80%{transform: translate(-10%,20%);}
-    100%{transform: translate(0,0);}
-
-
-}
-@keyframes shrinking-spot-light {
-    
-    100%{background-image:radial-gradient(rgba(87, 83, 83, 0.667), #111 15%)
-    }
-}
-@keyframes moving-spot-light-2 {
-    90%{transform: translate(0,0);}
-    95%{transform: translate(-10%,-10%);}
-    100%{transform: translate(0,0);}
-} */
-.middel-box{
-    height: 4rem;
-    width: 4rem;
-    position: relative;
-    transform:translate(-50%, 11rem);
+.middle-box{
+    height: 3rem;
+    width: 3rem;
+    position: absolute;
+    transform:translate(-50%, 7rem)  ;
 }
 .box-sides{
     width: 100%;
     height: 100%;
     border-radius: 5px ;
     position: absolute;
-    background-color: #e40b0b;
-    animation: glowing 0.5s linear infinite;
-}
-@keyframes glowing {
-   to{ 
-    background-color: #080707;
-    }
+    box-shadow:inset 0px 0px 10px rgba(0, 0, 0, 0.37) ;
+    background-image:radial-gradient(rgba(13, 13, 14, 0.667), #111 100%),
+                                url('../resources/floorBlock.jpg');
+    background-color: #dd0202;
+
 }
 
 
 .box-sides.front{
-    transform: translateZ(2rem);
+    transform: translateZ(1.2rem);
 }
 .box-sides.back{
-    transform: translateZ(-2rem);
+    transform: translateZ(-1.2rem);
 }
 .box-sides.left{
-    transform: rotatey(270deg) translateZ(2rem);
+    transform: rotatey(270deg) translateZ(1.2rem);
 }
 .box-sides.right{
-    transform: rotatey(90deg) translateZ(2rem);
+    transform: rotatey(90deg) translateZ(1.2rem);
 }
 .box-sides.top{
-    transform: rotatex(90deg) translateZ(2rem);
+    transform: rotatex(90deg) translateZ(1.2rem);
 }
 .box-sides.bottom{
-    transform: rotatex(270deg) translateZ(1.9rem) scale(2);
+    transform: rotatex(270deg) translateZ(1.2rem) scale(2);
     filter: blur(15px);
 }
+
 
 .lights{
     position: absolute;
@@ -143,4 +120,15 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 
 .white-background{
     background-color: rgb(88, 85, 85);
+}
+
+.visibility{
+    visibility: hidden;
+    
+}
+.hidden{
+    visibility: hidden; 
+}
+.opacity{
+    opacity: 0;
 }
