@@ -175,7 +175,7 @@ function expandLight(speed) {
 
 function animationPlayer() {
     let myInterval;
-    let pos = 20;
+    let pos = 0;
     let helpvar1;
     let helpvar2;
     clearInterval(myInterval);
