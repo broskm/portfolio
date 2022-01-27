@@ -25,7 +25,7 @@
 @keyframes floorexpand {
     to{
         background-image:radial-gradient(rgba(10, 10, 10, 0.667), #111 70%),
-        url('resources/floorBlock.jpg');
+        url('../resources/floorBlock.jpg');
     }
 }
 @keyframes rotate{
