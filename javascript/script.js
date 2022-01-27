@@ -141,7 +141,7 @@ function layersAnimation(speed) {
                     height: 20rem;
                     background-color: rgb(0, 0, 0);
                     background-image:
-                    radial-gradient(rgb(0 0 0 / 44%), #000000 100%), url(https://github.com/broskm/portfolio/tree/main/resources/floorBlock.jpg);
+                    radial-gradient(rgb(0 0 0 / 44%), #000000 100%), url('../resources/floorBlock.jpg');
                     opacity:1;
                 }   
             }`
