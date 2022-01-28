@@ -255,7 +255,7 @@ function animationPlayer() {
                 toggleMiddleBoxanimation();
                 card1BackgroundImg.style.transition = "background 1s,filter 1s";
                 mainContainer.style.animation = "rotate 15s linear forwards";
-            } else if (pos > 47) {
+            } else if (pos > 45) {
                 removeAnimationsEffects();
 
             }
