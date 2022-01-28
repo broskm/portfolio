@@ -159,6 +159,7 @@ function removeAnimationsEffects() {
     mainContainer.style.transform = `rotateY(-360deg)`;
     mainContainer.style.transition = "transform 0.01s ease-in-out";
     card1BackgroundImg.style.transition = "background 1s,filter 1s";
+    skipBTN.classList.add("hidden");
     setInterval(() => {
         mainContainer.style.transition = "transform 1.5s ease-in-out";
     }, 500);
@@ -240,10 +241,10 @@ function animationPlayer() {
             } else if (pos == 25.5) {
                 floorInner.style.transition = `1s ease-in-out`;
                 floorInner.style.transform = `translate(0px,0px)`;
-                card1BackgroundImg.style.transition = "opacity 4s  ease-in-out";
+                card1BackgroundImg.style.transition = "opacity 10s  ease-in-out";
                 card1BackgroundImg.style.opacity = "1";
                 for (let j = 0; j < cardContent.length; j++) {
-                    cardContent[j].style.transition = "opacity 4s ease-in-out";
+                    cardContent[j].style.transition = "opacity 10s ease-in-out";
                     cardContent[j].style.opacity = "1";
                 };
 
