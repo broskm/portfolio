@@ -13,7 +13,6 @@
 // box start building the 3D cards
 const mainContainer = document.querySelector(".container")
 const floor = document.querySelector(".floor");
-console.log(floor);
 const floorInner = document.querySelector(".floor-inner");
 const middleBox = document.querySelector(".middle-box");
 const middleBoxSides = document.querySelectorAll(".box-sides");
@@ -115,8 +114,10 @@ function skipAnimationHandler() {
         layersAnimation(0);
         TogglehideCards(1);
         removeAnimationsEffects();
+        floorInner.style.transition = `0s`;
         expandLight(0);
         middleBoxop(1);
+        toggleMiddleBoxanimation();
         middleBox.style.transform = "translate(-50%, 7rem)";
         skipBTN.classList.add("hidden");
 
@@ -166,6 +167,19 @@ function removeAnimationsEffects() {
 
 }
 
+function vanishToggle(x){
+    if (x == 0){
+    middleBoxSides.forEach(side => {
+        side.style.animation = `vanish 0.75s ease-in-out forwards `;
+
+    });
+    }else{
+        middleBoxSides.forEach(side => {
+            side.style.animation = `unvanish 0.5s ease-in-out forwards `;
+    
+        });
+    }
+}
 
 function expandLight(speed) {
     floorInner.classList.add("hidden");
@@ -188,57 +202,58 @@ function animationPlayer() {
         } else {
             pos += 0.5;
             pos == 1 ? toggleMiddleBoxanimation(1.5) : null;
-            pos == 3 ? toggleMiddleBoxanimation(1) : null;
-            pos == 5 ? toggleMiddleBoxanimation(0.5) : null;
-            if (pos == 8) {
-                floorInner.style.top = middleBox.getBoundingClientRect().top;
-                floorInner.style.left = middleBox.getBoundingClientRect().left;
-                floorInner.style.right = middleBox.getBoundingClientRect().right;
-                floorInner.style.bottom = middleBox.getBoundingClientRect().bottom;
-                floorInner.style.backgroundImage = `radial-gradient(rgba(87, 83, 83, 0.247), #111 25%)`;
+            if (pos ==3) {
+                toggleMiddleBoxanimation(1);
+                floorInner.style.transform = `translate(250px,-350px)`;
+                floorInner.style.transition = `0.5s `
+                }
+            pos == 5 ? toggleMiddleBoxanimation(0.5):null;
+            pos == 7 ? floorInner.style.backgroundImage = `radial-gradient(rgba(87, 83, 83, 0.247), #111 30%)`:null;
+            pos == 8 ? floorInner.style.transform = `translate(0px,0px)`:null;
+            if (pos == 8.5){
+                vanishToggle(0);
             }
-            pos == 8.5 ? middleBoxop(0) : null;
-            if (pos == 9.5) {
+            if (pos == 10.5) {
                 middleBox.style.transform = "translate(-50%, 7rem) translateX(-300px) translateZ(200px)";
-                middleBoxop(1);
-            } else if (pos == 10) {
-                floorInner.style.transition = `1.5s `;
+                toggleMiddleBoxanimation(0.4);
+                floorInner.style.transition = `1.5s 1s `;
                 floorInner.style.transform = `translate(-340px,150px)`;
             }
-            pos == 11 ? middleBoxop(0) : null;
-            if (pos == 12) {
+            pos == 13 ? vanishToggle(0) : null; 
+            if (pos == 13.5) {
                 floorInner.style.transition = `0.5s`;
                 floorInner.style.transform = `translate(-450px,150px)`;
             }
-            pos == 12.5 ? floorInner.style.transform = `translate(-240px,100px)` : null;
-            pos == 13 ? floorInner.style.transform = `translate(-350px,250px)` : null;
-            if (pos == 14.5) {
+            pos == 14 ? floorInner.style.transform = `translate(-240px,100px)` : null;
+            pos == 14.5 ? floorInner.style.transform = `translate(-350px,250px)` : null;
+            if (pos == 16) {
                 floorInner.style.transition = `1.5s ease-in-out`;
                 floorInner.style.transform = `translate(-100px,450px)`;
             }
-            pos == 16 ? floorInner.style.transform = `translate(250px,500px)` : null;
-            pos == 17.5 ? floorInner.style.transform = `translate(300px,-150px)` : null;
-            pos == 19 ? floorInner.style.transform = `translate(-150px,-50px)`:null;
-            if (pos == 20.5) {
+            pos == 17.5 ? floorInner.style.transform = `translate(250px,500px)` : null;
+            pos == 19 ? floorInner.style.transform = `translate(300px,-150px)` : null;
+            pos == 20.5 ? floorInner.style.transform = `translate(-150px,-50px)`:null;
+            if (pos == 21.5) {
                 middleBox.style.transform = "translate(-50%, 7rem)";
-                middleBoxop(1);
+                toggleMiddleBoxanimation(0.2);
                 floorInner.style.transition = `1s ease-in-out`;
                 floorInner.style.transform = `translate(-250px,-150px)`;
-            } else if (pos == 21.5) {
+            } else if (pos == 23) {
                 floorInner.style.transition = `0.2s ease-in-out`;
                 floorInner.style.transform = `translate(0px,0px)`;
-            } else if (pos == 23) {
+                toggleMiddleBoxanimation(0.02)
+            } else if (pos == 24.5) {
                 layersAnimation(2);
-            } else if (pos == 23.5) {
-                floorInner.style.transition = `0.5s ease-in-out`;
-                floorInner.style.transform = `translate(-75px,0px)`;
-            } else if (pos == 24) {
-                floorInner.style.transition = `1s ease-in-out`;
-                floorInner.style.transform = `translate(75px,0px)`;
             } else if (pos == 25) {
                 floorInner.style.transition = `0.5s ease-in-out`;
+                floorInner.style.transform = `translate(-75px,0px)`;
+            } else if (pos == 26 ) {
+                floorInner.style.transition = `1s ease-in-out`;
+                floorInner.style.transform = `translate(75px,0px)`;
+            } else if (pos == 26.5 ) {
+                floorInner.style.transition = `0.5s ease-in-out`;
                 floorInner.style.transform = `translate(0px,75px)`;
-            } else if (pos == 25.5) {
+            } else if (pos == 27.5) {
                 floorInner.style.transition = `1s ease-in-out`;
                 floorInner.style.transform = `translate(0px,0px)`;
                 card1BackgroundImg.style.transition = "opacity 10s  ease-in-out";
@@ -248,14 +263,14 @@ function animationPlayer() {
                     cardContent[j].style.opacity = "1";
                 };
 
-            } else if (pos == 26.5) {
+            } else if (pos == 30.5) {
                 expandLight(3);
             }
-            else if (pos == 29.5) {
+            else if (pos == 32.5) {
                 toggleMiddleBoxanimation();
                 card1BackgroundImg.style.transition = "background 1s,filter 1s";
                 mainContainer.style.animation = "rotate 15s linear forwards";
-            } else if (pos > 45) {
+            } else if (pos > 47.5) {
                 removeAnimationsEffects();
 
             }

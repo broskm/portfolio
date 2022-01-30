@@ -81,7 +81,6 @@ table, caption, tbody, tfoot, thead, tr, th, td {
     box-shadow:inset 0px 0px 10px rgba(0, 0, 0, 0.37) ;
     background-image:radial-gradient(rgba(13, 13, 14, 0.667), #111 100%),
                                 url('../resources/floorBlock.jpg');
-    background-color: #dd0202;
 
 }
 
@@ -104,6 +103,7 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 .box-sides.bottom{
     transform: rotatex(270deg) translateZ(1.2rem) scale(2);
     filter: blur(15px);
+                   
 }
 
 
